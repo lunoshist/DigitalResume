@@ -1,0 +1,93 @@
+<head>
+    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use. typekit.net/iqdozy.css"> <!-- Import H1 Custom Font -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>        
+        <h1>Lunoshist</h1>
+        <h2>Creative Coder</h2>
+        <div class="tiles">
+            <div class="tiles__line">
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('https://media.posterlounge.com/images/big/1871512.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://i.ebayimg.com/images/g/wtEAAOSw7spePJD7/s-l400.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://www.tableau-deco.net/wp-content/uploads/2019/02/tableau-deco-noir-et-blanc-portrait-femme-branche-arbre-05.jpg');"></div>
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('https://media.posterlounge.com/images/big/1871512.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://i.ebayimg.com/images/g/wtEAAOSw7spePJD7/s-l400.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://www.tableau-deco.net/wp-content/uploads/2019/02/tableau-deco-noir-et-blanc-portrait-femme-branche-arbre-05.jpg');"></div>
+            </div>
+            <div class="tiles__line">
+                <div class="tiles__line-img" style="background-image: url('https://www.guillenphoto.com/images/igallery/resized/6401-6500/01_photo_de_paysages_en_noir_et_blanc-6424-1200-800-100.webp');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://www.naturephotographie.com/wp-content/uploads/2021/04/Asymmetric.jpg');"></div>
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('http://www.vianey-photographie.com/wp-content/uploads/2019/08/Photographie-nature-paysage-noir-et-blanc_resize-1800x1192.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://www.guillenphoto.com/images/igallery/resized/6401-6500/01_photo_de_paysages_en_noir_et_blanc-6424-1200-800-100.webp');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://www.naturephotographie.com/wp-content/uploads/2021/04/Asymmetric.jpg');"></div>
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('http://www.vianey-photographie.com/wp-content/uploads/2019/08/Photographie-nature-paysage-noir-et-blanc_resize-1800x1192.jpg');"></div>
+            </div>
+            <div class="tiles__line">
+                <div class="tiles__line-img" style= "background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aap1uU4bLoQxDxxqOuDEiztz2vWqabkiOQ&usqp=CAU');"></div>
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('https://couleur-science.eu/img/8d/black-ink.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://i.pinimg.com/236x/87/ce/b9/87ceb91313018a0543522e1295a0ce5b--black-white-photos-black-and-white.jpg');"></div>
+                <div class="tiles__line-img" style= "background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1aap1uU4bLoQxDxxqOuDEiztz2vWqabkiOQ&usqp=CAU');"></div>
+                <div class="tiles__line-img tiles__line-img--large" style="background-image: url('https://couleur-science.eu/img/8d/black-ink.jpg');"></div>
+                <div class="tiles__line-img" style="background-image: url('https://i.pinimg.com/236x/87/ce/b9/87ceb91313018a0543522e1295a0ce5b--black-white-photos-black-and-white.jpg')"></div>
+            </div>
+        </div>
+
+        <filter id="goo-4">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="blur"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="	1 0 0 0 0  
+                0 1 0 0 0  
+                0 0 1 0 0  
+                0 0 0 18 -8" result="goo"></feColorMatrix>
+            <feTurbulence type="fractalNoise" baseFrequency="1 0.01" numOctaves="1" seed="1" result="noise"></feTurbulence>
+            <feDisplacementMap in="goo" in2="noise" scale="0" result="displacement"></feDisplacementMap>
+            <feComposite in="SourceGraphic" in2="displacement" operator="atop"></feComposite>
+        </filter>
+
+    </header>
+
+    <main>
+        <h3>Bref aperçu de mes expériences</h3>
+        <div id="Bento">
+            <div id="Dolibarr" class="proj">
+                <p>Développement de solutions sur mesure pour répondre aux besoins spécifiques de mon entreprise. Solutions intégrées avec succès à Dolibarr, un projet open source de renom dans le domaine de l'ERP & CRM. J'ai acquis une expertise significative en programmation PHP, en développement logiciel et en collaboration au sein d’une communauté open source. Mon travail a contribué à améliorer la fonctionnalité et l'efficacité de Dolibarr pour de nombreux utilisateurs à travers le monde.</p>
+                <h4>Dolibarr</h4>
+            </div>
+            <div id="Callista" class="proj">
+                <p>Un projet novateur exploitant les capacités avancées de ChatGPT pour offrir une expérience utilisateur exceptionnelle. J'ai développé des compétences en intelligence artificielle en créant un chatbot pour le moins amusant.</p>
+                <h4>CALLISTA</h4>
+            </div>
+            <div id="Auchan" class="proj">
+                <p>Acteur clé dans une collaboration inter-école avec le groupe Auchan, j'ai contribué à la conception et à la mise en œuvre d'une solution digitale révolutionnaire. Ma participation active a renforcé mes compétences en travail d'équipe, en gestion de projet, et en compréhension des exigences du marché, tout en fournissant une solution innovante répondant aux attentes de l'industrie.</p>
+                <h4>AUCHAN</h4>
+            </div>
+            <div id="56" class="proj">
+                <p>Un projet personnel consistant à explorer un effet visuel en CSS chaque semaine. Ce défi hebdomadaire a approfondi ma compréhension des techniques de design web, renforcé ma persévérance, et démontré ma capacité à acquérir de nouvelles compétences de manière autonome.</p>
+                <h4>PROJECT 56</h4>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Contactez-moi</h3>
+        <form action="https://formsubmit.co/35823b8e6df336d523a072a4761bde97" method="POST" id="contact-form">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+            
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Le sujet de votre message" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+            
+            <button type="submit">Envoyer</button>
+        </form>
+    </footer>
+</body>

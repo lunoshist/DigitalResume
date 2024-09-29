@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+}
+html {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+html::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
+}
+
+header {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: meno-banner, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  -webkit-mask-image: linear-gradient(0deg, transparent 16px, #000 100px);
+}
+
+h1, h2, h3, h4 {
+  color: #c57eb1;
+}
+h1, h2 {
+  font-size: 16vw;
+  z-index: 99;
+  mix-blend-mode: difference;
+  filter: url(#goo-4);
+  opacity: 1;
+}
+h2 {
+  font-size: 10vw;
+}
+h3 {
+  font-size: 5vw;
+  margin-left: 5vw;
+}
+p {
+  color:ivory ;
+}
+
+/*First part*/
+
+.tiles {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(23deg);
+}
+
+.tiles__line {
+  display: flex;
+  animation: runnerReverse 5s ease infinite;
+  opacity: 0.65;
+  transform: translateX(-25%);
+}
+
+.tiles__line:nth-child(1) {
+  animation-delay: 0ms;
+}
+.tiles__line:nth-child(2) {
+  animation-delay: 2000ms;
+}
+.tiles__line:nth-child(3) {
+  animation-delay: 4000ms;
+}
+
+.tiles__line-img {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3vw;
+  flex: none;
+}
+  
+.tiles__line-img--large {
+  width: 100vh;
+  border-radius: 10vh;
+}
+@keyframes runner {
+  to { transform: translateX(-25%) }
+}
+
+@keyframes runnerReverse {
+to { transform: translateX(25%) }
+}
+
+
+/*Project part*/
+
+#Bento {
+  margin: 3vw;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5vw;
+}
+
+@media (max-width: 1024px) {
+  #Bento {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.proj {
+  position: relative;
+  height: 30vh;
+  padding: 2vw 3vh;
+  border-radius: 5vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column-reverse;
+  grid-column: span 1;
+}
+
+/* Superposition sombre sur l'image */
+.proj::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Transparent au départ */
+  transition: background-color 0.5s ease; /* Transition pour rendre le fondu doux */
+}
+
+.proj:hover::before {
+  background-color: rgba(0, 0, 0, 0.6); /* Teinte noire semi-transparente au hover */
+}
+
+/* Style du titre */
+.proj h4 {
+  z-index: 2; /* Assure que le titre reste au-dessus de la superposition sombre */
+}
+
+/* Style de la description */
+
+.proj p {
+  color: white;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  z-index: 2;
+}
+
+/* Affichage de la description au hover */
+.proj:hover p {
+  opacity: 1;
+  max-height: 15vh; /* Ajuster selon la taille souhaitée */
+}
+
+#Dolibarr {
+  background-image: url(./img/Dolibarr.webp);
+  grid-column: span 3;
+}
+
+
+
+
+
+
+#contact {
+  margin-top: 5vh;
+  text-align: center;
+}
+
+#contact h3 {
+  margin-bottom: 2vh;
+  font-size: 2rem;
+}
+
+#contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form label {
+  margin-top: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+/* #contact-form input, #contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+} */
+
+#contact-form button {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  #contact-form {
+    padding: 0 2vw;
+  }
+}
+
+input, textarea {
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+     inset -20px -20px 60px #ffffff;
+  /* box-shadow: 20px 20px 60px #c5c5c5,
+     -20px -20px 60px #ffffff; */
+  transition: 0.3s;
+}
+ 
+input:focus, textarea:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+     inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+}
+
+footer {
+  padding-bottom: 10vh;
+}

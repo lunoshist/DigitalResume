@@ -174,7 +174,15 @@ to { transform: translateX(25%) }
   background-image: url(./img/Dolibarr.webp);
   grid-column: span 3;
 }
-
+#Callista {
+  background-image: url(./img/Callista.png);
+}
+#Auchan {
+  background-image: url(./img/Auchan.png);
+}
+#Projet56 {
+  background-image: url(./img/projet56.png);
+}
 
 
 
